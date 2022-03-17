@@ -8,21 +8,23 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header>
-    <h1>Python Cheat Sheet</h1>
-    <nav>
-      <a href="#Introduction" class="nav-link">Introduction</a>
-      <a href="#Variables" class="nav-link">Variables</a>
-      <a href="#Declaring-variables" class="nav-link">Declaring variables</a>
-      <a href="#Data-types" class="nav-link">Data types</a>
-      <a href="#if-else-statement" class="nav-link">if...else statements</a>
-      <a href="#loops" class="nav-link">while and for loops</a>
-      <a href="#Functions" class="nav-link">Functions</a>
-    </nav>
-  </header>
-  <main>
-    <div id="Introduction">
-      <h2>Introduction</h2>
+  <nav id="navbar">
+    <header id="nav-header">Python Cheat Sheet</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Variables" class="nav-link">Variables</a>
+    <a href="#Declaring_variables" class="nav-link">Declaring variables</a>
+    <a href="#Data_types" class="nav-link">Data types</a>
+    <a href="#if_else_statements" class="nav-link">if else statements</a>
+    <a href="#while_and_for_loops" class="nav-link">while and for loops</a>
+    <a href="#Functions" class="nav-link">Functions</a>
+  </nav>
+  <main id="main-doc">
+    <h1>
+      Python Cheat Sheet
+    </h1>
+    
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
       <p>Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today. A survey conducted by industry analyst firm RedMonk found that it was the most popular programming language among developers in 2020. Python has many advantages.</p>
       <section>
         <h3>Python is: </h3>
@@ -34,9 +36,10 @@
           <li>Free and Open-Source</li>
         </ul>
       </section>
-    </div>
-    <div id="Variables">
-      <h2>Variables</h2>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
       <p>Variables are containers for storing data values. Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
       <div class="code-div">
         <code>
@@ -53,9 +56,10 @@
           John 
         </code>
       </div>
-    </div>
-    <div id="Declaring-variables">
-      <h2>Declaring variables</h2>
+    </section>
+
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
       <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
       <div class="code-div">
       <code>
@@ -72,9 +76,10 @@
           Sally
         </code>
       </div>
-    </div>
-    <div id="Data-types">
-      <h2>Data types</h2>
+    </section>
+
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
       <p>An attribute of data which tells the compiler or interpreter how the programmer intends to use the data.</p>
       <section>
         <h3>Some Data types are:</h3>
@@ -86,9 +91,10 @@
           <li>Float</li>
         </ul>
       </section>
-    </div>
-    <div id="if-else-statement">
-      <h2>if...else statements</h2>
+    </section>
+
+    <section class="main-section" id="if_else_statements">
+      <header>if else statements</header>
       <section>
         <h3>Python supports the usual logical conditions from mathematics:</h3>
         <ul>
@@ -98,9 +104,11 @@
           <li>Less than: <code class="code-sin">a <= b</code></li>
         </ul>
       </section>
-    </div>
-    <div id="loops">
-      <h2>while and for loops</h2>
+    </section>
+
+    <section class="main-section" id="while_and_for_loops">
+      <header>while and for loops</header>
+      <p>Loops are bit of code that run other code untill a condition is met</p>
       <section>
         <h3>Python has two primitive loop commands:</h3>
         <ul>
@@ -112,18 +120,21 @@
       <p>With the <code class="code-sin">while</code> loop we can execute a set of statements as long as a condition is true.</p>
       <h3>The for loop</h3>
       <p>A <code class="code-sin">for</code> loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
-    </div>
-    <div id="Functions">
-      <h2>Functions</h2>
-      In Python a function is defined using the <code class="code-sin">def</code> keyword:
-      <br><br>
+      <p>Loops can be exited using <code class="code-sin">break</code>.</p>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>In Python a function is defined using the <code class="code-sin">def</code> keyword:</p>
+      <br>
       <div class="code-div">
         <code>
           <code style="color: blue;">def</code> my_function: <br>
           &emsp;&emsp;<code style="color: blue;">print</code>(<code style="color: maroon;">"Hello from a function"</code>)
         </code>
       </div>
-    </div>
+      <p>There are many great uses for functions. They can reduce repetition in code and make it easier to read</p>
+    </section>
   </main>
   <footer>
     follow me on <a href="https://github.com/Lachy-Dauth" id="git-link">GitHub</a>

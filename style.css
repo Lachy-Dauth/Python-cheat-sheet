@@ -1,18 +1,55 @@
 body {
   font-family: sans-serif;
   margin: 0px;
+  display: grid;
+  grid-template-columns: min(250px, 35%) 1fr;
+  grid-template-rows: auto 70px;
+  grid-template-areas: 
+    "nav header"
+    "nav footer";
+}
+
+main {
+  padding: 10px;
+  grid-area: header;
+}
+
+.code-div {
+  background-color: rgb(235, 235, 235);
+  padding: 7px;
+  border-radius: 7px;
+  border-left: 7px solid green;
+  min-width: 150px;
+  min-height: 80px;
+  width: fit-content;
+}
+
+.output-div {
+  background-color: rgb(235, 235, 235);
+  padding: 7px;
+  border-radius: 7px;
+  border-left: 7px solid rgb(0, 0, 0);
+  min-width: 150px;
+  min-height: 80px;
+  width: fit-content;
 }
 
 header {
+  box-sizing: border-box;
+  grid-area: nav;
   position: fixed;
+  width: 250px;
+  max-width: 35%;
   height: 100%;
   border-right: 2px solid grey;
+  z-index: 999;
 }
 
 h1 {
   margin: 10px;
   padding: 10px 0px;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 nav {
@@ -25,22 +62,52 @@ nav {
   text-decoration: none;
   border-top: 1px solid black;
   padding: 10px 10px;
+  padding-right: 0px;
   font-size: 1rem;
   background-color: rgb(255, 255, 255);
-  transition: 0.2s ease;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, padding;
+  transition-duration: 0.1s;
 }
 
 .nav-link:hover {
-  color: black;
-  text-decoration: none;
-  border-top: 1px solid black;
   padding: 20px 25px;
+  padding-right: 0px;
   background-color: rgb(241, 241, 241);
-  transition: 0.2s ease;
+  transition-property: background-color, padding;
+  transition-duration: 0.1s;
 }
 
 .nav-link:active {
   padding: 20px 20px;
+  padding-right: 0px;
   background-color: rgb(255, 255, 255);
-  transition: 0.05s ease;
+  transition-property: background-color, padding;
+  transition-duration: 0.05s;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+}
+
+#git-link {
+  text-decoration: none;
+  color: blue;
+}
+
+#git-link:hover {
+  color: rgb(0, 110, 255);
+}
+
+li {
+  padding: 3px;
+}
+
+.code-sin {
+  font-size: 1.1rem;
+  background-color: rgb(235, 235, 235);
+  padding: 2px 5px;
+  border-radius: 2px;
 }

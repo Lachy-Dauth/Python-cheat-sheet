@@ -5,13 +5,13 @@ body {
   grid-template-columns: min(250px, 35%) 1fr;
   grid-template-rows: auto 70px;
   grid-template-areas: 
-    "nav header"
+    "nav main"
     "nav footer";
 }
 
 main {
   padding: 10px;
-  grid-area: header;
+  grid-area: main;
 }
 
 .code-div {
@@ -42,10 +42,13 @@ header {
 }
 
 #nav-header {
-  margin: 10px;
-  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  padding: 20px 10px;
   font-size: 1.5rem;
   text-align: center;
+  background-color: white;
+  border-bottom: 1px solid black;
 }
 
 #navbar {
@@ -54,9 +57,11 @@ header {
   box-sizing: border-box;
   grid-area: nav;
   position: fixed;
+  overflow-y: scroll;
   width: 250px;
   max-width: 35%;
   height: 100%;
+  max-height: 100%;
   border-right: 2px solid grey;
   z-index: 999;
 }
@@ -116,7 +121,7 @@ li {
   border-radius: 2px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .nav-link {
     color: black;
     text-decoration: none;
@@ -143,5 +148,42 @@ li {
     background-color: rgb(255, 255, 255);
     transition-property: background-color, padding;
     transition-duration: 0.05s;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-family: sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto 70px;
+    grid-template-areas: 
+      "nav"
+      "main"
+      "footer";
+  }
+
+  #navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    grid-area: nav;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid grey;
+    z-index: 999;
+  }
+
+  #nav-header {
+    padding: 10px 20px;
+  }
+
+  .main-section {
+    padding-top: 300px;
+    margin-top: -300px;
   }
 }
